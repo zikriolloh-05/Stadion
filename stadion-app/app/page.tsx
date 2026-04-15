@@ -11,12 +11,13 @@ export default function HomePage() {
   return (
     <>
       <Navbar onAddFieldClick={() => setIsAddModalOpen(true)} />
-      
-      <main className="max-w-7xl mx-auto px-4 py-8 mt-16">
+
+      <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero секция */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            The Pitch is yours.
+            Поле в твоих руках
+            Забронируй сейчас
           </h1>
           {city === "Khujand" && (
             <p className="text-white/60 text-lg">
