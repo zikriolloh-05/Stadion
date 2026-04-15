@@ -35,7 +35,7 @@ const defaultDushanbeFields = [
   },
   {
     id: 4,
-    name: "Зелёный Газон",
+    name: "Зеленый Газон",
     location: "ул. Сомони, 101",
     photos: ["https://picsum.photos/id/170/800/500"],
     workingHours: { open: "10:00", close: "23:00" },

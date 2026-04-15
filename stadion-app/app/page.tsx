@@ -4,13 +4,24 @@ import { useAppContext } from "./context/AppContext";
 import FieldCard from "./components/FieldCard";
 import AddFieldModal from "./components/AddFieldModal";
 import Navbar from "./components/navbar";
+
+interface Field {
+  id: number;
+  name: string;
+  location: string;
+  photos: string[];
+  price: string;
+  workingHours: { open: string; close: string };
+  bookings: string[];
+}
+
 export default function HomePage() {
   const { fields, city } = useAppContext();
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   return (
     <>
-      <Navbar onAddFieldClick={() => setIsAddModalOpen(true)} />
+      {/* <Navbar onAddFieldClick={() => setIsAddModalOpen(true)} /> */}
 
       <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero секция */}
@@ -41,7 +52,7 @@ export default function HomePage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {fields.map((field) => (
+            {fields.map((field: Field) => (
               <FieldCard key={field.id} field={field} />
             ))}
           </div>

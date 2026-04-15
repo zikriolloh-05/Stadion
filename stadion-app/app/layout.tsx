@@ -10,7 +10,13 @@ export const metadata = {
   description: "Лучшие футбольные поля Таджикистана",
 };
 
-export default function RootLayout({ children }) {
+// export default function RootLayout({ children }) 
+export default function RootLayout({ 
+  children 
+}: { 
+  children: React.ReactNode 
+})
+{
   return (
     <html lang="ru">
       <body className={`${lexend.variable} font-sans bg-[#09160e] text-white`}>
